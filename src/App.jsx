@@ -1,14 +1,39 @@
-import React from "react";
-import "../public/sample.vtt";
+import './App.css';
+import React from 'react';
+import {
+	BrowserRouter as Router,
+	Routes,
+	Route,
+	Navigate,
+} from 'react-router-dom';
+import { PostList } from './features/posts/PostList';
+import { AddPostForm } from './features/posts/AddPostForm';
+import { SinglePostPage } from './features/posts/SinglePostPage';
+import { EditPostForm } from './features/posts/EditPostForm';
+import { Navbar } from './components/Navbar';
 
 function App() {
-    // return <video width="100%" controls autoPlay muted>
-    return <video width="600" height="400" controls>
-        <source
-            src="https://file-examples.com/storage/fe8a7837bf63ad8783d6a5d/2017/04/file_example_MP4_480_1_5MG.mp4"
-            type="video/mp4"/>
-        <track label="English" kind="subtitles" srcLang="en" src="sample.vtt" />
-    </video>
+	return (
+		<Router>
+			<Navbar />
+			<div>
+				<Routes>
+					<Route
+						path='/'
+						element={
+							<>
+								<AddPostForm />
+								<PostList />
+							</>
+						}
+					/>
+					<Route path='/post/:postId' element={<SinglePostPage />} />
+					<Route path='/editPost/:postId' element={<EditPostForm />} />
+					<Route path='/' element={<Navigate to='/' />} />
+				</Routes>
+			</div>
+		</Router>
+	);
 }
 
 export default App;

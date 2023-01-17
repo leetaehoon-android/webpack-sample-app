@@ -8,10 +8,13 @@
  * @see {@link https://github.com/leetaehoon-android/SampleWebpackApp/blob/main/README.md#react-component-inline으로-구성}
  */
 module.exports = {
-    presets: ['@babel/preset-react', '@babel/preset-env'],
+    presets: [
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ],
     env: {
         production: {
-            plugins: ['@babel/plugin-transform-react-inline-elements']
+            plugins: ["@babel/plugin-transform-react-inline-elements"]
         }
     }
 };

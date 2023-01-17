@@ -1,51 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        html, body {
+            margin: 0;
+            background-color: white;
+        }
+        button:focus {
+            outline-style: solid;
+            outline-color: blueviolet;
+        }
+        video::cue {
+            color: papayawhip;
+        }
+        video::cue(b) {
+            color: peachpuff;
+        }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height" />
+    <title>CRA 없이 설정하기</title>
+</head>
+<body>
+<div id="root"></div>
+</body>
+</html>
+
 <!--<!DOCTYPE html>-->
 <!--<html lang="en">-->
 <!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>HTML5 Video WebVTT Example</title>-->
+<!--    <meta name="keywords" content="html5, webvtt, webvtt example">-->
+<!--    <meta name="author" content="Breno Polanski">-->
+<!--    <meta name="description" content="Sample HTML5 code that makes use of a WebVTT file to add subtitles to a video">-->
 <!--    <style>-->
-<!--        body {-->
-<!--            background-color: white;-->
-<!--        }-->
-<!--        video::cue {-->
-<!--            color: papayawhip;-->
-<!--        }-->
-<!--        video::cue(b) {-->
-<!--            color: peachpuff;-->
-<!--        }-->
 <!--        * {-->
 <!--            margin: 20px 0 auto;-->
 <!--            text-align: center;-->
 <!--        }-->
 <!--    </style>-->
-<!--    <meta charset="UTF-8" />-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
-<!--    <title>CRA 없이 설정하기</title>-->
 <!--</head>-->
 <!--<body>-->
-<!--<div id="root"></div>-->
+<!--<section>-->
+<!--    <video width="600" height="400" controls>-->
+<!--        <source src="https://file-examples.com/storage/fe8a7837bf63ad8783d6a5d/2017/04/file_example_MP4_480_1_5MG.mp4" type="video/mp4">-->
+<!--        <track label="pt" kind="subtitles" srclang="pt" src="./sample.vtt" default />-->
+<!--    </video>-->
+<!--</section>-->
 <!--</body>-->
 <!--</html>-->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>HTML5 Video WebVTT Example</title>
-    <meta name="keywords" content="html5, webvtt, webvtt example">
-    <meta name="author" content="Breno Polanski">
-    <meta name="description" content="Sample HTML5 code that makes use of a WebVTT file to add subtitles to a video">
-    <style>
-        * {
-            margin: 20px 0 auto;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-<section>
-    <video width="600" height="400" controls>
-        <source src="https://file-examples.com/storage/fe8a7837bf63ad8783d6a5d/2017/04/file_example_MP4_480_1_5MG.mp4" type="video/mp4">
-        <track label="pt" kind="subtitles" srclang="pt" src="./sample.vtt" default />
-    </video>
-</section>
-</body>
-</html>
